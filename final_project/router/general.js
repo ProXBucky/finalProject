@@ -80,21 +80,21 @@ public_users.get('/api/', async function getlistBook(req, res) {
 })
 
 //Task 11
-public_users.get('/api/isbn/:isbn', async function getlistBook(req, res) {
+public_users.get('/api/isbn/:isbn', async function getBookByIsbn(req, res) {
   let isbn = req.params.isbn
   let respone = await axios.get(`http://localhost:5000/isbn/${isbn}`)
   return res.send(respone.data)
 })
 
 //Task 12
-public_users.get('/api/author/:author', async function getlistBook(req, res) {
+public_users.get('/api/author/:author', async function getBookByAuthor(req, res) {
   let author = req.params.author
   let respone = await axios.get(`http://localhost:5000/author/${author}`)
   return res.send(respone.data)
 })
 
 //Task 13
-public_users.get('/api/title/:title', async function getlistBook(req, res) {
+public_users.get('/api/title/:title', async function getBookByTitle(req, res) {
   let title = req.params.title
   let respone = await axios.get(`http://localhost:5000/title/${title}`)
   return res.send(respone.data)
